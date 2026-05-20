@@ -15,12 +15,12 @@ public class Projekt {
   private boolean tavmunka;
 
   // Összekötés a Munkaado táblával
-  @ManyToOne
+  @ManyToOne(cascade = CascadeType.ALL)
   @JoinColumn(name = "munkaado_id")
   private Munkaado munkaado;
 
   // Összekötés a Kategoria táblával
-  @ManyToOne
+  @ManyToOne(cascade = CascadeType.ALL)
   @JoinColumn(name = "kategoria_id")
   private Kategoria kategoria;
 
